@@ -172,7 +172,7 @@ defaults:
 # Site Author
 author:
   name: snowdj
-  picture: /images/michael-rose-photo.jpg
+  picture: # /images/michael-rose-photo.jpg
   email:
   twitter: snowdj
   links:
