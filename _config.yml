@@ -14,15 +14,17 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-theme: jekyll-theme-so-simple
-# remote_theme: mmistakes/so-simple-theme
-repository: "snowdj/jekyll-theme-basically-basic"
+#theme: jekyll-theme-so-simple
+
+remote_theme: mmistakes/so-simple-theme
+
 
 locale: en-US
 title: "So Simple"
 description: "A simple Jekyll theme for words and pictures."
 baseurl: "/so-simple-theme"
 url: "https://snowdj.github.io"
+repository: "snowdj/so-simple-theme"
 logo: "/images/so-simple-site-logo.png"
 date_format: "%B %-d, %Y"
 read_time: true
@@ -53,8 +55,35 @@ liquid:
 # Build settings
 permalink: /:categories/:title/
 markdown: kramdown
+
+highlighter: rouge
+lsi: false
+incremental: false
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+
 feed:
   path: atom.xml
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+# Outputting
+permalink: /:categories/:title/
+timezone: America/New_York # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
 
 # Pagination - https://jekyllrb.com/docs/pagination/
 paginate: 10
@@ -67,6 +96,33 @@ search_full_content: false
 # Taxonomy pages
 category_archive_path: "/categories/#"
 tag_archive_path: "/tags/#"
+
+
+# Exclude from processing.
+exclude:
+  - .asset-cache
+  - .bundle
+  - .codeclimate.yml
+  - .editorconfig
+  - .gitattributes
+  - .jekyll-assets-cache
+  - .sass-cache
+  - .scss-lint.yml
+  - CHANGELOG
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - node_modules
+  - Rakefile
+  - README
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - /docs # ignore Basically Basic sample site
+  - /example # ignore Basically Basic dev site
+
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
